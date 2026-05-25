@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Theme tokens ─── */
+:root,
+html.dark {
+  color-scheme: dark;
+  --bg: #06060a;
+  --bg-elev: #0a0a12;
+  --surface: rgba(255, 255, 255, 0.05);
+  --surface-strong: rgba(255, 255, 255, 0.10);
+  --border: rgba(255, 255, 255, 0.14);
+  --text: #f8fafc;
+  --text-dim: #cbd5e1;
+  --bg-radial-1: rgba(139, 92, 246, 0.18);
+  --bg-radial-2: rgba(34, 211, 238, 0.14);
+}
+
+html.light {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --bg-elev: #ffffff;
+  --surface: rgba(15, 23, 42, 0.04);
+  --surface-strong: rgba(15, 23, 42, 0.08);
+  --border: rgba(15, 23, 42, 0.12);
+  --text: #0b1020;
+  --text-dim: #334155;
+  --bg-radial-1: rgba(139, 92, 246, 0.16);
+  --bg-radial-2: rgba(14, 165, 233, 0.14);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html, body, #root { min-height: 100%; }
+
+body {
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 80% -10%, var(--bg-radial-1), transparent 60%),
+    radial-gradient(900px 500px at -10% 20%, var(--bg-radial-2), transparent 60%),
+    var(--bg);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'ss01', 'cv11';
+  transition: background-color 0.4s ease, color 0.3s ease;
+}
+
+/* Safe-area padding for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+::selection { background: rgba(139, 92, 246, 0.35); color: #fff; }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-elev); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7c3aed, #22d3ee);
+  border-radius: 999px;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-10; }
+
+  .glass {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  .glow-ring {
+    box-shadow:
+      0 0 0 1px var(--border),
+      0 20px 60px -20px rgba(139, 92, 246, 0.45),
+      0 8px 30px -10px rgba(34, 211, 238, 0.35);
+  }
+
+  .text-gradient {
+    background: linear-gradient(120deg, #c4b5fd 0%, #22d3ee 50%, #ec4899 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  html.light .text-gradient {
+    background: linear-gradient(120deg, #6d28d9 0%, #0891b2 50%, #db2777 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .text-gradient-soft {
+    background: linear-gradient(120deg, #e9d5ff, #a5f3fc);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white
+      bg-gradient-to-r from-violet-500 via-fuchsia-500 to-cyan-500
+      shadow-[0_10px_30px_-10px_rgba(139,92,246,0.6)]
+      transition-transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium transition-colors;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+  }
+  .btn-ghost:hover { background: var(--surface-strong); }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dim);
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-5xl font-bold tracking-tight;
+    color: var(--text);
+  }
+
+  .section-eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 rounded-full px-3 py-1
+      text-xs font-medium uppercase tracking-[0.18em];
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-dim);
+  }
+
+  .card {
+    @apply relative rounded-2xl p-6;
+    background: linear-gradient(180deg, var(--surface), transparent);
+    border: 1px solid var(--border);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+
+  /* Blinking terminal caret */
+  .caret::after {
+    content: '▍';
+    margin-left: 2px;
+    animation: blink 1s steps(2) infinite;
+    color: #22d3ee;
+  }
+}
+
+/* ─── Dark-mode contrast bumps (eye-friendlier muted text) ─── */
+html.dark .text-zinc-300 { color: #e2e8f0; }
+html.dark .text-zinc-400 { color: #cbd5e1; }
+html.dark .text-zinc-500 { color: #94a3b8; }
+
+/* ─── Light-mode overrides for inline Tailwind classes ─── */
+html.light .text-white { color: #06060a; }
+html.light .text-zinc-100 { color: #0b1020; }
+html.light .text-zinc-200 { color: #111827; }
+html.light .text-zinc-300 { color: #1f2937; }
+html.light .text-zinc-400 { color: #334155; }
+html.light .text-zinc-500 { color: #475569; }
+
+html.light .border-white\/5  { border-color: rgba(15,23,42,0.05); }
+html.light .border-white\/10 { border-color: rgba(15,23,42,0.10); }
+html.light .border-white\/20 { border-color: rgba(15,23,42,0.18); }
+
+html.light .bg-white\/5         { background-color: rgba(15,23,42,0.04); }
+html.light .bg-white\/10        { background-color: rgba(15,23,42,0.07); }
+html.light .bg-white\/\[0\.03\] { background-color: rgba(15,23,42,0.03); }
+html.light .bg-white\/\[0\.04\] { background-color: rgba(15,23,42,0.04); }
+html.light .bg-white\/\[0\.05\] { background-color: rgba(15,23,42,0.05); }
+html.light .bg-black\/20        { background-color: rgba(255,255,255,0.6); }
+
+html.light .bg-noise { opacity: 0.18 !important; }
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent);
+    mask-image: linear-gradient(to bottom, #000 60%, transparent);
+  }
+  .mask-fade-x {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+  .bg-aurora {
+    background: linear-gradient(120deg, #7c3aed, #22d3ee, #ec4899, #7c3aed);
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes blink {
+  to { opacity: 0; }
+}
+
+@media (pointer: fine) {
+  body.has-custom-cursor,
+  body.has-custom-cursor * { cursor: none !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}

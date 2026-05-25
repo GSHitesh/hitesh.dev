@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node / build
+node_modules/
+dist/
+.cache/
+*.log
+.env
+.env.local
+.env.*.local
+
+# Old static portfolio — kept out of the new repo
+Hitesh-Portfolio/
+
+# Local résumé sources we don't want public
+*.pdf
+*.docx
