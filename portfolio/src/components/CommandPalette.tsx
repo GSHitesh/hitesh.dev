@@ -79,14 +79,14 @@ export default function CommandPalette() {
       { id: 'nav-contact', label: 'Go to Contact', group: 'Navigate', icon: <Send size={16} />, shortcut: 'g c', run: () => scrollToId('contact') },
 
       // Resume
-      { id: 'resume-view', label: 'View résumé (PDF)', group: 'Resume', icon: <FileText size={16} />, run: () => window.open(profile.resumeUrl, '_blank', 'noopener,noreferrer') },
+      { id: 'resume-view', label: 'View résumé (PDF)', group: 'Resume', icon: <FileText size={16} />, run: () => { window.open(profile.resumeUrl, '_blank', 'noopener,noreferrer'); } },
       { id: 'resume-print', label: 'Print this page', group: 'Resume', icon: <Printer size={16} />, shortcut: 'Ctrl+P', run: () => window.print() },
 
       // Links
       { id: 'mail-copy', label: `Copy email · ${profile.email}`, group: 'Links', icon: copied ? <CheckCircle2 size={16} className="text-emerald-400" /> : <Copy size={16} />, run: copyEmail },
       { id: 'mail-open', label: 'Email me', group: 'Links', icon: <Mail size={16} />, run: () => { window.location.href = profile.socials.email; } },
-      { id: 'github', label: 'Open GitHub', group: 'Links', icon: <Github size={16} />, run: () => window.open(profile.socials.github, '_blank', 'noopener,noreferrer') },
-      { id: 'linkedin', label: 'Open LinkedIn', group: 'Links', icon: <Linkedin size={16} />, run: () => window.open(profile.socials.linkedin, '_blank', 'noopener,noreferrer') },
+      { id: 'github', label: 'Open GitHub', group: 'Links', icon: <Github size={16} />, run: () => { window.open(profile.socials.github, '_blank', 'noopener,noreferrer'); } },
+      { id: 'linkedin', label: 'Open LinkedIn', group: 'Links', icon: <Linkedin size={16} />, run: () => { window.open(profile.socials.linkedin, '_blank', 'noopener,noreferrer'); } },
 
       // Theme
       { id: 'theme-toggle', label: theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode', group: 'Theme', icon: theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />, shortcut: 't', run: toggleTheme },
