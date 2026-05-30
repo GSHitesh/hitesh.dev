@@ -20,12 +20,15 @@ export const profile = {
   role: 'Software Engineer',
   tagline: 'Backend systems · API integration · Automation',
   location: 'Bengaluru, Karnataka',
-  email: 'gorantlahitesh01@gmail.com',
+  email: 'saihitesh01@gmail.com',
   resumeUrl: 'https://drive.google.com/file/d/1bALG9scCL53wAwPA5VFM_N4yXRSDOtyr/view?usp=sharing',
+  contactEndpoint:
+    (import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined) ??
+    'https://hitesh-contact.gshitesh.workers.dev',
   socials: {
     github: 'https://github.com/GSHitesh',
     linkedin: 'https://linkedin.com/in/sai-hitesh-gorantla',
-    email: 'mailto:gorantlahitesh01@gmail.com',
+    email: 'mailto:saihitesh01@gmail.com',
   },
   summary:
     'Results-driven Software Engineer with 2+ years delivering production back-end systems, REST/SOAP API integrations, and end-to-end automation. Proficient in Python, Django, Docker, and microservices, with a track record of shipping scalable services that cut cost and accelerate delivery. Strong across CI/CD (Jenkins, GitHub Actions, JFrog), observability (Grafana, Prometheus, Loki), and bare-metal Linux operations on RHEL, Rocky, and SLES.',
@@ -60,6 +63,8 @@ export const experiences: Experience[] = [
       'Streamlined software delivery by building a parameterized RPM packaging framework and build/sign/publish pipeline, cutting onboarding timelines to under a day.',
       'Deployed comprehensive system observability (Grafana, Prometheus, Loki) alongside automated OS provisioning (RHEL, Rocky, SLES), enabling proactive failure mitigation across bare-metal and VM environments.',
       'Troubleshot and root-caused production issues using log analysis and staging reproduction; fed permanent fixes into the automated validation pipeline to eliminate recurrence.',
+      'Automated daily Jenkins pipeline failure reporting in Python, generating formatted reports (system name, release version, test failure) with auto-hyperlinked Jira tickets to drastically reduce manual triage time.',
+      'Spearheaded mentorship for 2nd-year engineering students, guiding them through foundational technical concepts and software engineering career preparation.',
       'Mentor two 2nd-year engineering students, guiding them through foundational technical concepts, problem-solving, and career preparation.',
     ],
     stack: ['Python', 'Jenkins', 'Slack API', 'Docker', 'rpmbuild', 'JFrog', 'Grafana', 'Prometheus', 'Loki', 'iLO', 'HPCM', 'Linux', 'Bash', 'CI/CD'],
@@ -201,15 +206,5 @@ export const certifications = [
     title: 'Meta Back-End Developer Professional Certificate',
     issuer: 'Coursera · Meta',
     year: '2023',
-  },
-  {
-    title: 'Artificial Intelligence Foundations',
-    issuer: 'NASSCOM',
-    year: '2021',
-  },
-  {
-    title: 'The Web Developer Bootcamp',
-    issuer: 'Udemy',
-    year: '2021',
   },
 ];

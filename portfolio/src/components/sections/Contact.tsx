@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Mail, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { profile } from '../../data/resume';
 import { useMagnetic } from '../../hooks/useMagnetic';
+import ContactForm from '../ContactForm';
 
 export default function Contact() {
   const ctaRef = useMagnetic<HTMLAnchorElement>(0.3);
@@ -77,6 +78,9 @@ export default function Contact() {
                 <InfoRow icon={<Mail size={16} />} label="Email" value={profile.email} href={profile.socials.email} />
                 <InfoRow icon={<MapPin size={16} />} label="Based in" value={profile.location} />
               </motion.ul>
+              <div className="mt-4">
+                <ContactForm />
+              </div>
             </div>
           </div>
         </div>

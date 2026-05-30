@@ -3,6 +3,7 @@ import Footer from './components/Footer';
 import Cursor from './components/Cursor';
 import ScrollProgress from './components/ScrollProgress';
 import Pipeline from './components/Pipeline';
+import CommandPalette from './components/CommandPalette';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Experience from './components/sections/Experience';
@@ -28,6 +29,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <CommandPalette />
     </>
   );
 }
