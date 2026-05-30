@@ -55,10 +55,12 @@ export const experiences: Experience[] = [
     location: 'Bengaluru, Karnataka',
     bullets: [
       'Developed a custom Slack ChatOps bot to orchestrate multi-stage Jenkins pipelines and stream real-time alerts, boosting developer efficiency by ~90% by eliminating manual dashboard monitoring.',
+      'Built a Python automation that aggregates 24-hour Jenkins pipeline test failures into a single report — system name, release version, failure details, and auto-hyperlinked Jira tickets — drastically reducing manual triage time.',
       'Orchestrated infrastructure bring-up for compute and networking hardware, scripting post-deployment validations to ensure systems met strict baseline standards.',
       'Streamlined software delivery by building a parameterized RPM packaging framework and build/sign/publish pipeline, cutting onboarding timelines to under a day.',
       'Deployed comprehensive system observability (Grafana, Prometheus, Loki) alongside automated OS provisioning (RHEL, Rocky, SLES), enabling proactive failure mitigation across bare-metal and VM environments.',
       'Troubleshot and root-caused production issues using log analysis and staging reproduction; fed permanent fixes into the automated validation pipeline to eliminate recurrence.',
+      'Mentor two 2nd-year engineering students, guiding them through foundational technical concepts, problem-solving, and career preparation.',
     ],
     stack: ['Python', 'Jenkins', 'Slack API', 'Docker', 'rpmbuild', 'JFrog', 'Grafana', 'Prometheus', 'Loki', 'iLO', 'HPCM', 'Linux', 'Bash', 'CI/CD'],
   },
@@ -103,16 +105,16 @@ export const projects: Project[] = [
     accent: 'violet',
   },
   {
-    title: 'Encrypto · Simplified File Encryption',
-    date: 'September 2021',
+    title: 'Microservices Sandbox',
+    date: '2025',
     description:
-      'A zero-install web app for client-side AES file encryption with a built-in strong password generator.',
+      'A localized multi-service playground that spins up a small fleet of containerized microservices on a single host, wired together with a Docker network, an Ansible bootstrap, and a CI pipeline that builds, tests, and ships every service on push.',
     bullets: [
-      'AES-based encryption pipeline running fully in the browser via CryptoJS.',
-      'Integrated secure password generator to assist key creation.',
-      'Polished UX focused on a one-click encrypt/decrypt workflow.',
+      'Composed 4+ Python/Flask microservices behind an Nginx gateway, each shipped as its own Docker image with health checks and graceful shutdown.',
+      'Wrote an Ansible playbook that provisions Docker, pulls images, and brings the stack up on a fresh Linux host in a single command.',
+      'Automated build, lint, test, and image-publish stages via Jenkins and GitHub Actions, with Bash helpers for local one-shot rebuilds.',
     ],
-    stack: ['HTML', 'CSS', 'JavaScript', 'CryptoJS'],
+    stack: ['Docker', 'Docker Compose', 'Ansible', 'Bash', 'Jenkins', 'GitHub Actions', 'Python', 'Flask'],
     accent: 'cyan',
   },
 ];
@@ -162,7 +164,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Cloud & Platforms',
     icon: Cloud,
-    items: ['AWS (EC2 · S3 · IAM)', 'Linux', 'GitHub Pages'],
+    items: ['AWS (EC2 · S3 · IAM)'],
   },
   {
     title: 'Practices',

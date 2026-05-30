@@ -2,17 +2,8 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Download, Sparkles } from 'lucide-react';
 import HeroScene from '../HeroScene';
 import BootTerminal from '../BootTerminal';
-import Typewriter from '../Typewriter';
 import { profile } from '../../data/resume';
 import { useMagnetic } from '../../hooks/useMagnetic';
-
-const ROLES = [
-  'backend systems engineer.',
-  'automation alchemist.',
-  'CI/CD pipeline plumber.',
-  'observability nerd.',
-  'bare-metal whisperer.',
-];
 
 export default function Hero() {
   const ctaRef = useMagnetic<HTMLAnchorElement>(0.25);
@@ -75,9 +66,7 @@ export default function Hero() {
             className="mt-6 max-w-xl text-base text-zinc-300 sm:text-lg"
           >
             Hi, I'm <span className="text-white">Sai Hitesh</span> — a{' '}
-            <span className="font-mono text-accent-cyan">
-              <Typewriter words={ROLES} />
-            </span>
+            <span className="font-mono text-accent-cyan">backend system engineer.</span>
             <br />
             I design APIs, CI/CD pipelines, and observability stacks that keep
             bare-metal and containers humming across <span className="text-white">RHEL</span>,{' '}

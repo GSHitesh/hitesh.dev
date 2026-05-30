@@ -27,7 +27,7 @@ export default function About() {
 
           <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
             <Stat value={2} suffix="+" label="Years building" enabled={inView} />
-            <Stat value={6} suffix="%" label="Efficiency lift" enabled={inView} />
+            <Stat value={90} suffix="%" label="Efficiency lift" enabled={inView} />
             <Stat value={50} suffix="L+" label="₹ Saved" enabled={inView} />
             <Stat value={20} suffix="%" label="Perf boost" enabled={inView} />
           </div>
