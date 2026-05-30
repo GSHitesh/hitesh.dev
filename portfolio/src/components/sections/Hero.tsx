@@ -95,13 +95,14 @@ export default function Hero() {
               <ArrowDown size={16} className="-rotate-45" />
             </a>
             <a
-              href="/Hitesh_Resume.pdf"
-              download
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-ghost"
               data-cursor="hover"
             >
               <Download size={16} />
-              Download résumé
+              View résumé
             </a>
           </motion.div>
 

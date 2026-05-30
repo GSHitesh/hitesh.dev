@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { Mail, MapPin, Github, Linkedin, ArrowUpRight } from 'lucide-react';
 import { profile } from '../../data/resume';
 import { useMagnetic } from '../../hooks/useMagnetic';
 
@@ -75,7 +75,6 @@ export default function Contact() {
                 className="grid gap-3"
               >
                 <InfoRow icon={<Mail size={16} />} label="Email" value={profile.email} href={profile.socials.email} />
-                <InfoRow icon={<Phone size={16} />} label="Phone" value={profile.phone} />
                 <InfoRow icon={<MapPin size={16} />} label="Based in" value={profile.location} />
               </motion.ul>
             </div>

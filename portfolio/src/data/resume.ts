@@ -21,7 +21,7 @@ export const profile = {
   tagline: 'Backend systems · API integration · Automation',
   location: 'Bengaluru, Karnataka',
   email: 'gorantlahitesh01@gmail.com',
-  phone: '+91 ••••• •3807',
+  resumeUrl: 'https://drive.google.com/file/d/1bALG9scCL53wAwPA5VFM_N4yXRSDOtyr/view?usp=sharing',
   socials: {
     github: 'https://github.com/GSHitesh',
     linkedin: 'https://linkedin.com/in/sai-hitesh-gorantla',
