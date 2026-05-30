@@ -28,10 +28,10 @@ export const profile = {
     email: 'mailto:gorantlahitesh01@gmail.com',
   },
   summary:
-    'Software engineer with 2+ years of experience in back-end systems, API integration, and automation. Proficient in Python, Django, Docker, and microservices architecture, with a proven ability to design scalable and efficient solutions. Skilled in CI/CD pipelines, Agile methodologies, and solving complex technical challenges.',
+    'Results-driven Software Engineer with 2+ years delivering production back-end systems, REST/SOAP API integrations, and end-to-end automation. Proficient in Python, Django, Docker, and microservices, with a track record of shipping scalable services that cut cost and accelerate delivery. Strong across CI/CD (Jenkins, GitHub Actions, JFrog), observability (Grafana, Prometheus, Loki), and bare-metal Linux operations on RHEL, Rocky, and SLES.',
   highlights: [
     { label: 'Years building backends', value: '2+' },
-    { label: 'Engineering efficiency lifted', value: '+6%' },
+    { label: 'Developer efficiency lifted', value: '~90%' },
     { label: 'Gateway cost saved', value: '₹50L+' },
     { label: 'Commission uplift', value: '+2.5%' },
   ],
@@ -54,13 +54,13 @@ export const experiences: Experience[] = [
     period: 'Feb 2024 — Present',
     location: 'Bengaluru, Karnataka',
     bullets: [
-      'Streamlined build processes by integrating Slack with Jenkins, enabling email notifications and boosting engineering efficiency by 6%.',
-      'Deployed automated OS installations across nodes, reducing manual efforts and accelerating system deployment.',
-      'Rectified environmental inconsistencies, ensuring adherence to organizational standards and minimizing downtime.',
-      'Resolved critical infrastructure defects, improving system reliability and operational stability.',
-      'Mentored team members on best practices, fostering a collaborative and high-performing environment.',
+      'Developed a custom Slack ChatOps bot to orchestrate multi-stage Jenkins pipelines and stream real-time alerts, boosting developer efficiency by ~90% by eliminating manual dashboard monitoring.',
+      'Orchestrated infrastructure bring-up for compute and networking hardware, scripting post-deployment validations to ensure systems met strict baseline standards.',
+      'Streamlined software delivery by building a parameterized RPM packaging framework and build/sign/publish pipeline, cutting onboarding timelines to under a day.',
+      'Deployed comprehensive system observability (Grafana, Prometheus, Loki) alongside automated OS provisioning (RHEL, Rocky, SLES), enabling proactive failure mitigation across bare-metal and VM environments.',
+      'Troubleshot and root-caused production issues using log analysis and staging reproduction; fed permanent fixes into the automated validation pipeline to eliminate recurrence.',
     ],
-    stack: ['Python', 'Jenkins', 'Slack API', 'Linux', 'Bash', 'CI/CD'],
+    stack: ['Python', 'Jenkins', 'Slack API', 'Docker', 'rpmbuild', 'JFrog', 'Grafana', 'Prometheus', 'Loki', 'iLO', 'HPCM', 'Linux', 'Bash', 'CI/CD'],
   },
   {
     company: 'ITILITE Technologies',
@@ -68,14 +68,13 @@ export const experiences: Experience[] = [
     period: 'Sept 2022 — Feb 2024',
     location: 'Bengaluru, Karnataka',
     bullets: [
-      'Designed and developed APIs for seamless client integration, enhancing connectivity and operational efficiency.',
-      'Implemented SOAP API integration with a Terminal Service OT travel vendor, increasing company commissions by 2.5%.',
-      'Migrated credit card data securely to GDS Smartpoint using Django and SOAP API, reducing payment gateway expenses by ₹50L+.',
-      'Troubleshot and resolved production issues in hotel and bus bookings, achieving a 20% boost in operational performance.',
-      'Optimized hotel refund categorization and cancellation policies using Python, reducing customer inquiries.',
-      'Developed SQL-based financial tracking systems for monthly expense monitoring, enhancing client decision-making.',
+      'Designed and shipped REST and SOAP APIs in Python/Django for partner integrations, strengthening client connectivity and unlocking new revenue channels.',
+      'Integrated a SOAP API with a Terminal Service OT travel vendor, lifting company commissions by 2.5% on routed bookings.',
+      'Migrated PCI credit-card data securely to GDS Smartpoint via Django and SOAP, eliminating ₹50L+ in annual payment-gateway expenses.',
+      'Diagnosed and resolved production incidents across hotel and bus booking flows, driving a 20% gain in operational performance and SLA adherence.',
+      'Refactored hotel refund categorization and cancellation logic in Python, reducing customer-support inquiries and improving refund-cycle accuracy.',
     ],
-    stack: ['Python', 'Django', 'SOAP', 'REST', 'MySQL', 'Docker'],
+    stack: ['Python', 'Django', 'SOAP', 'REST', 'MySQL', 'Docker', 'GDS Smartpoint'],
   },
 ];
 
@@ -128,7 +127,7 @@ export const skillGroups: SkillGroup[] = [
   {
     title: 'Languages & Scripting',
     icon: Code2,
-    items: ['Python', 'C++', 'Bash', 'Shell Scripting', 'SQL'],
+    items: ['Python', 'C++', 'Bash', 'Shell Scripting', 'SQL', 'Groovy'],
   },
   {
     title: 'Frameworks',
@@ -136,29 +135,44 @@ export const skillGroups: SkillGroup[] = [
     items: ['Django', 'Django REST', 'Flask'],
   },
   {
+    title: 'APIs & Integration',
+    icon: GitBranch,
+    items: ['REST', 'SOAP', 'JSON', 'XML', 'Microservices', 'Postman', 'Webhooks'],
+  },
+  {
     title: 'CI/CD & DevOps',
     icon: Workflow,
-    items: ['Jenkins', 'Git', 'JFrog Artifactory', 'Docker', 'Postman'],
+    items: ['Jenkins', 'GitHub Actions', 'JFrog Artifactory', 'Docker', 'Ansible', 'Git', 'rpmbuild', 'Shell Automation'],
   },
   {
     title: 'Observability',
     icon: Activity,
-    items: ['Grafana', 'Prometheus', 'Loki', 'Zabbix'],
+    items: ['Grafana', 'Prometheus', 'Loki', 'Zabbix', 'Log Aggregation', 'Alerting'],
   },
   {
     title: 'Infrastructure & Hardware',
     icon: Cpu,
-    items: ['iLO', 'Hypervisors', 'Bare-metal Systems', 'HPCM', 'Linux (RHEL · Rocky · SLES)'],
+    items: ['HPE iLO', 'HPCM', 'Hypervisors', 'Bare-metal Provisioning', 'NIC & Switch Config', 'Linux (RHEL · Rocky · SLES)'],
   },
   {
     title: 'Databases',
     icon: Database,
-    items: ['MySQL', 'PostgreSQL', 'SQLite', 'SQL'],
+    items: ['PostgreSQL', 'MySQL', 'SQLite'],
+  },
+  {
+    title: 'Cloud & Platforms',
+    icon: Cloud,
+    items: ['AWS (EC2 · S3 · IAM)', 'Linux', 'GitHub Pages'],
+  },
+  {
+    title: 'Practices',
+    icon: ShieldCheck,
+    items: ['Agile / Scrum', 'Code Review', 'TDD', 'SDLC', 'Mentoring', 'Incident Response'],
   },
   {
     title: 'Collaboration',
     icon: Container,
-    items: ['Jira', 'Confluence', 'Agile / Scrum'],
+    items: ['Jira', 'Confluence', 'Slack', 'GitHub'],
   },
 ];
 
