@@ -203,6 +203,11 @@ export const education = [
 
 export const certifications = [
   {
+    title: 'CompTIA Security+ (SY0-701)',
+    issuer: 'CompTIA',
+    year: 'Jan 2026',
+  },
+  {
     title: 'Meta Back-End Developer Professional Certificate',
     issuer: 'Coursera · Meta',
     year: '2023',
