@@ -11,7 +11,7 @@ wrangler login
 
 # secrets
 wrangler secret put RESEND_API_KEY
-wrangler secret put OWNER_EMAIL    # e.g. saihitesh01@gmail.com
+wrangler secret put OWNER_EMAIL    # e.g. gorantlahitesh01@gmail.com
 wrangler secret put FROM_EMAIL     # e.g. contact@hitesh.dev (verified Resend sender)
 
 wrangler deploy

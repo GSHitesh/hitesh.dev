@@ -20,7 +20,7 @@ export const profile = {
   role: 'Software Engineer',
   tagline: 'Backend systems · API integration · Automation',
   location: 'Bengaluru, Karnataka',
-  email: 'saihitesh01@gmail.com',
+  email: 'gorantlahitesh01@gmail.com',
   resumeUrl: 'https://drive.google.com/file/d/1bALG9scCL53wAwPA5VFM_N4yXRSDOtyr/view?usp=sharing',
   contactEndpoint:
     (import.meta.env.VITE_CONTACT_ENDPOINT as string | undefined) ??
@@ -28,7 +28,7 @@ export const profile = {
   socials: {
     github: 'https://github.com/GSHitesh',
     linkedin: 'https://linkedin.com/in/sai-hitesh-gorantla',
-    email: 'mailto:saihitesh01@gmail.com',
+    email: 'mailto:gorantlahitesh01@gmail.com',
   },
   summary:
     'Results-driven Software Engineer with 2+ years delivering production back-end systems, REST/SOAP API integrations, and end-to-end automation. Proficient in Python, Django, Docker, and microservices, with a track record of shipping scalable services that cut cost and accelerate delivery. Strong across CI/CD (Jenkins, GitHub Actions, JFrog), observability (Grafana, Prometheus, Loki), and bare-metal Linux operations on RHEL, Rocky, and SLES.',

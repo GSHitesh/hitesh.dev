@@ -4,7 +4,7 @@
  * Accepts POST { name, email, message, _gotcha } and forwards to your inbox via Resend.
  * Configure these via `wrangler secret put` (do NOT commit them):
  *   - RESEND_API_KEY   (https://resend.com/api-keys)
- *   - OWNER_EMAIL      (where messages are delivered, e.g. saihitesh01@gmail.com)
+ *   - OWNER_EMAIL      (where messages are delivered, e.g. gorantlahitesh01@gmail.com)
  *   - FROM_EMAIL       (verified Resend sender, e.g. contact@hitesh.dev)
  *   - ALLOWED_ORIGIN   (e.g. https://gshitesh.github.io  — set via wrangler.toml [vars])
  */

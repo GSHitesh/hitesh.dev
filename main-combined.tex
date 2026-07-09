@@ -1,0 +1,190 @@
+%-------------------------
+% Resume in Latex
+% Author : Sai Hitesh Gorantla
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.6in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Sai Hitesh Gorantla} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-7732943807 ~ 
+    \href{mailto:gorantlahitesh01@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{gorantlahitesh01@gmail.com}} ~ 
+    \href{https://gshitesh.github.io/hitesh.dev/}{\raisebox{-0.2\height}\faGlobe\ \underline{gshitesh.github.io}} ~ 
+    \href{https://www.linkedin.com/in/sai-hitesh-gorantla}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/sai-hitesh-gorantla}} ~ 
+    \href{https://github.com/GSHitesh}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/GSHitesh}}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section*{Professional Summary}
+DevOps Engineer with 3+ years building CI/CD pipelines and automating build, packaging, and release workflows. Hands-on with Jenkins, GitHub Actions, GitLab, JFrog Artifactory, and Docker, and experienced managing cloud and on-premise infrastructure, provisioning bare-metal Linux (RHEL, Rocky, SLES), and monitoring with Grafana, Prometheus, and Loki.
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Hewlett Packard Enterprise (HPE)}{Feb 2024 -- Present}
+      {System Engineer 2}{Bengaluru, Karnataka}
+      \resumeItemListStart
+        \resumeItem{\textbf{Developed} a custom Slack ChatOps bot to orchestrate multi-stage Jenkins pipelines and stream real-time alerts, \textbf{boosting developer efficiency by 90\%} by eliminating manual dashboard monitoring.}
+        \resumeItem{\textbf{Orchestrated} infrastructure bring-up for compute and networking hardware, scripting post-deployment validations to ensure systems met strict baseline standards.}
+        \resumeItem{\textbf{Streamlined} software delivery by building a parameterized RPM packaging framework and build/sign/publish pipeline, \textbf{cutting onboarding timelines to under a day}.}
+        \resumeItem{\textbf{Deployed} comprehensive system observability (Grafana, Prometheus, Loki) alongside automated OS provisioning (RHEL, Rocky, SLES), \textbf{enabling proactive failure mitigation} across bare-metal and VM environments.}
+        \resumeItem{\textbf{Troubleshot and root-caused} production issues using log analysis and staging reproduction; fed permanent fixes into the automated validation pipeline to \textbf{eliminate recurrence}.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ITILITE Technologies}{Sept 2022 -- Feb 2024}
+      {Associate Software Engineer}{Bengaluru, Karnataka}
+      \resumeItemListStart
+        \resumeItem{\textbf{Designed and shipped} REST and SOAP APIs in Python/Django for partner integrations, \textbf{strengthening client connectivity} and unlocking new revenue channels.}
+        \resumeItem{\textbf{Integrated} a SOAP API with a Terminal Service OT travel vendor, \textbf{lifting company commissions by 2.5\%} on routed bookings.}
+        \resumeItem{\textbf{Migrated} PCI credit-card data securely to GDS Smartpoint via Django and SOAP, \textbf{eliminating Rs.~50L+ in annual payment-gateway expenses}.}
+        \resumeItem{\textbf{Diagnosed and resolved} production incidents across hotel and bus booking flows, \textbf{driving a 20\% gain in operational performance} and SLA adherence.}
+        \resumeItem{\textbf{Refactored} hotel refund categorization and cancellation logic in Python, \textbf{reducing customer-support inquiries} and improving refund-cycle accuracy.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-14pt}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{CI/CD \& Build:} {Jenkins, GitHub Actions, JFrog Artifactory, Docker, Git, rpmbuild} \\
+     \textbf{Languages:} {Python, Bash, Shell Scripting, SQL, Groovy} \\
+     \textbf{Operating Systems:} {Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Rocky Linux} \\
+     \textbf{Infrastructure \& Hardware:} {HPE iLO, HPCM, Hypervisors, Bare-metal Provisioning, NIC \& Switch Configuration} \\
+     \textbf{Observability \& Monitoring:} {Grafana, Prometheus, Loki, Zabbix} \\
+     \textbf{Frameworks \& Libraries:} {Django, Django REST Framework, Flask} \\
+     \textbf{APIs \& Integration:} {REST, SOAP, JSON, XML, Postman, Microservices, Webhooks} \\
+     \textbf{Databases:} {PostgreSQL, MySQL, SQLite} \\
+     \textbf{Practices:} {Agile / Scrum, Code Review, TDD, SDLC, Mentoring, Incident Response} \\
+     \textbf{Collaboration:} {Jira, Confluence, Slack, GitHub} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Vellore Institute of Technology}{July 2019 -- June 2023}
+      {Bachelor of Technology in Information Technology}{Vellore, Tamil Nadu}
+  \resumeSubHeadingListEnd
+
+%-----------Certifications---------------
+\section{Certifications}
+\resumeSubHeadingListStart
+\begin{itemize}
+\item \textbf{CompTIA Security+ (SY0-701) -- CompTIA, Jan 2026}
+\end{itemize}
+\resumeSubHeadingListEnd
+
+\end{document}
