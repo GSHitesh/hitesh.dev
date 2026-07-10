@@ -115,14 +115,15 @@
 \begin{center}
     {\Huge \scshape Sai Hitesh Gorantla} \\ \vspace{1pt}
     \small \raisebox{-0.1\height}\faPhone\ +91-7732943807 ~ 
-    \href{mailto:saihitesh01@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{gorantlahitesh01@gmail.com}} ~ 
-    \href{https://gshitesh.github.io/hitesh.dev/}{\raisebox{-0.2\height}\faGlobe\ \underline{gshitesh.github.io}} ~ 
+    \href{mailto:gorantlahitesh01@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{gorantlahitesh01@gmail.com}} ~ 
+    \href{https://gshitesh.github.io}{\raisebox{-0.2\height}\faGlobe\ \underline{gshitesh.github.io}} ~ 
     \href{https://www.linkedin.com/in/sai-hitesh-gorantla}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/sai-hitesh-gorantla}} ~ 
+    \href{https://github.com/GSHitesh}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/gshitesh}}
 \end{center}
 
 %-----------PROFESSIONAL SUMMARY-----------
 \section*{Professional Summary}
-DevOps Engineer with 3+ years building CI/CD pipelines and automating build, packaging, and release workflows. Hands-on with Jenkins, GitHub Actions, JFrog Artifactory, and Docker, and experienced managing on-premise and virtualized infrastructure, provisioning bare-metal Linux (RHEL, Rocky, SLES), and monitoring with Grafana, Prometheus, and Loki.
+DevOps Engineer with 3+ years building CI/CD pipelines, release automation, and infrastructure tooling for enterprise Linux platforms. Specialized in Jenkins, GitHub Actions, Python, Bash, Docker, and JFrog Artifactory, with deep experience in RPM packaging, bare-metal provisioning, and self-service developer tooling (FastAPI, ChatOps). Proven record of converting manual workflows into reliable, observable automation using Grafana, Prometheus, and Loki to improve developer productivity, release velocity, and system reliability.
 
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -132,22 +133,23 @@ DevOps Engineer with 3+ years building CI/CD pipelines and automating build, pac
       {Hewlett Packard Enterprise (HPE)}{Feb 2024 -- Present}
       {System Engineer 2}{Bengaluru, Karnataka}
       \resumeItemListStart
-        \resumeItem{\textbf{Developed} a custom Slack ChatOps bot to orchestrate multi-stage Jenkins pipelines and stream real-time alerts, \textbf{boosting developer efficiency by 90\%} by eliminating manual dashboard monitoring.}
-        \resumeItem{\textbf{Orchestrated} infrastructure bring-up for compute and networking hardware, scripting post-deployment validations that enforced strict baseline standards and \textbf{saved roughly a week of manual effort} per cycle.}
-        \resumeItem{\textbf{Streamlined} software delivery by building a parameterized RPM packaging framework and build/sign/publish pipeline, \textbf{cutting onboarding timelines to under a day}.}
-        \resumeItem{\textbf{Deployed} comprehensive system observability (Grafana, Prometheus, Loki) with \textbf{one-click deployment across 15 systems}, extensible to new nodes, alongside automated OS provisioning (RHEL, Rocky, SLES) to \textbf{enable proactive failure mitigation} across bare-metal and VM environments.}
-        \resumeItem{\textbf{Troubleshot and root-caused} production issues using log analysis and staging reproduction; fed permanent fixes into the automated validation pipeline, \textbf{eliminating ~2 recurring incidents per week}.}
+        \resumeItem{\textbf{Engineered} a reusable CI/CD framework in Jenkins to automate RPM build, signing, validation, and publishing to JFrog Artifactory, standardizing packaging across repositories and cutting release toil.}
+        \resumeItem{\textbf{Built} a Slack ChatOps bot in Python to orchestrate multi-stage Jenkins pipelines and stream real-time build notifications, eliminating manual dashboard monitoring and accelerating CI/CD feedback loops.}
+        \resumeItem{\textbf{Developed} a FastAPI service integrated with GitHub Webhooks to automate pull request tracking across releases, \textbf{reducing manual triage by 20+ hours per week}.}
+        \resumeItem{\textbf{Automated} end-to-end bring-up and validation of compute nodes with Mellanox and Cassini NICs, \textbf{saving roughly one week of manual effort} per provisioning cycle.}
+        \resumeItem{\textbf{Implemented} centralized observability with Grafana, Prometheus, and Loki across \textbf{100+ Linux servers}, enabling proactive alerting and faster incident detection.}
+        \resumeItem{\textbf{Diagnosed} release-blocking failures via log analysis and staging reproduction, delivering permanent fixes into the validation pipeline to \textbf{prevent recurrence} and protect release timelines.}
       \resumeItemListEnd
 
     \resumeSubheading
       {ITILITE Technologies}{Sept 2022 -- Feb 2024}
       {Associate Software Engineer}{Bengaluru, Karnataka}
       \resumeItemListStart
-        \resumeItem{\textbf{Designed and shipped} REST and SOAP APIs in Python/Django for partner integrations, \textbf{strengthening client connectivity} and unlocking new revenue channels.}
+        \resumeItem{\textbf{Designed and shipped} REST and SOAP APIs in Python and Django for enterprise partner integrations, \textbf{improving interoperability} and unlocking new business capabilities.}
         \resumeItem{\textbf{Integrated} a SOAP API with a Terminal Service OT travel vendor, \textbf{lifting company commissions by 2.5\%} on routed bookings.}
-        \resumeItem{\textbf{Migrated} PCI credit-card data securely to GDS Smartpoint via Django and SOAP, \textbf{eliminating Rs.~50L+ in annual payment-gateway expenses}.}
-        \resumeItem{\textbf{Diagnosed and resolved} production incidents across hotel and bus booking flows, \textbf{driving a 20\% gain in operational performance} and SLA adherence.}
-        \resumeItem{\textbf{Refactored} hotel refund categorization and cancellation logic in Python, \textbf{reducing customer-support inquiries} and improving refund-cycle accuracy.}
+        \resumeItem{\textbf{Migrated} PCI credit-card data securely to GDS Smartpoint via Django and SOAP, \textbf{eliminating \faRupeeSign\,50 lakh+ in annual payment-gateway costs}.}
+        \resumeItem{\textbf{Resolved} production incidents across hotel and bus booking workflows through log analysis, \textbf{improving application stability} and SLA adherence.}
+        \resumeItem{\textbf{Refactored} hotel refund categorization and cancellation logic in Python, \textbf{improving refund accuracy} and reducing customer-support requests.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-14pt}
@@ -157,19 +159,27 @@ DevOps Engineer with 3+ years building CI/CD pipelines and automating build, pac
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{CI/CD \& Build:} {Jenkins, GitHub Actions, JFrog Artifactory, Docker, Git, CMake, rpmbuild} \\
-     \textbf{Languages:} {Python, C++, Bash, Shell Scripting, SQL, Groovy} \\
-     \textbf{Operating Systems:} {Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), Rocky Linux} \\
-     \textbf{Infrastructure \& Hardware:} {HPE iLO, HPCM, Hypervisors, Bare-metal Provisioning, NIC \& Switch Configuration} \\
-     \textbf{Observability \& Monitoring:} {Grafana, Prometheus, Loki, Zabbix} \\
-     \textbf{Frameworks \& Libraries:} {Django, Django REST Framework, Flask} \\
-     \textbf{APIs \& Integration:} {REST, SOAP, JSON, XML, Postman, Microservices, Webhooks} \\
+     \textbf{CI/CD \& Release Engineering:} {Jenkins, GitHub Actions, JFrog Artifactory, Git, rpmbuild, CMake, Build \& Release Automation} \\
+     \textbf{Languages \& Scripting:} {Python, Bash, Shell Scripting, Groovy, C++, SQL} \\
+     \textbf{Infrastructure \& Automation:} {Ansible, Bare-metal Provisioning, HPE iLO, HPCM, NIC \& Switch Configuration, Infrastructure as Code} \\
+     \textbf{Containers \& Cloud:} {Docker, Hypervisors, AWS (EC2, S3, IAM)} \\
+     \textbf{Observability \& Monitoring:} {Grafana, Prometheus, Loki, Zabbix, Log Aggregation, Alerting} \\
+     \textbf{Operating Systems:} {Linux (RHEL, Rocky, SLES), Linux System Administration} \\
+     \textbf{APIs \& Backend:} {FastAPI, Flask, Django, REST, SOAP, GitHub Webhooks, Microservices} \\
      \textbf{Databases:} {PostgreSQL, MySQL, SQLite} \\
-     \textbf{Practices:} {Agile / Scrum, Code Review, TDD, SDLC, AI-Assisted Development (GitHub Copilot), Mentoring, Incident Response} \\
-     \textbf{Collaboration:} {Jira, Confluence, Slack, GitHub} \\
+     \textbf{Practices \& Tools:} {Agile/Scrum, Code Review, TDD, SDLC, Jira, Confluence, Slack} \\
     }}
  \end{itemize}
  \vspace{-16pt}
+%-----------PROJECTS-----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeProjectHeading{\textbf{Microservices CI/CD Sandbox} $|$ \emph{Docker, Ansible, Jenkins, GitHub Actions, Bash, Flask}}{}
+    \resumeItemListStart
+      \resumeItem{Built a containerized multi-service playground behind an Nginx gateway, automating provisioning with Ansible and build/test/publish stages via Jenkins and GitHub Actions with Bash-driven one-shot rebuilds.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-14pt}
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
